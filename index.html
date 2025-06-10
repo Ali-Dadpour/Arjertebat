@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شرکت ارج ارتباط سبز - انرژی خورشیدی و سیستم‌های فتوولتائیک</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* استایل‌های کلی */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #1a2a6c);
+            color: #333;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        header {
+            background: linear-gradient(90deg, #2c3e50, #4a6491);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            position: relative;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo i {
+            font-size: 2.5rem;
+            color: #ffd700;
+        }
+        
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        .logo-text span {
+            color: #4CAF50;
+        }
+        
+        nav {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+        
+        nav a:hover, nav a.active {
+            background: rgba(255, 255, 255, 0.25);
+            border: 2px solid #ffd700;
+        }
+        
+        .language-selector {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50px;
+            padding: 8px 15px;
+            display: flex;
+            gap: 10px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .lang-btn {
+            background: transparent;
+            border: 2px solid transparent;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .lang-btn.active, .lang-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: #ffd700;
+        }
+        
+        .page-content {
+            padding: 30px;
+            min-height: 500px;
+        }
+        
+        .page-section {
+            margin-bottom: 40px;
+        }
+        
+        .page-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #4CAF50;
+            color: #2c3e50;
+            font-size: 1.8rem;
+        }
+        
+        .page-title i {
+            font-size: 2rem;
+            color: #2c3e50;
+        }
+        
+        .content-box {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            margin-bottom: 30px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .service-card {
+            background: #f9f9f9;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            border-left: 4px solid #4CAF50;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .service-card i {
+            color: #4CAF50;
+            font-size: 1.5rem;
+        }
+        
+        .calculator-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        
+        @media (min-width: 992px) {
+            .calculator-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .calculator-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            transition: transform 0.3s ease;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .calculator-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #4CAF50;
+        }
+        
+        .card-header i {
+            font-size: 2rem;
+            color: #2c3e50;
+        }
+        
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 1.1rem;
+        }
+        
+        select, input {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            background: #f9f9f9;
+            transition: all 0.3s ease;
+        }
+        
+        select:focus, input:focus {
+            border-color: #4CAF50;
+            outline: none;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+        }
+        
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(90deg, #2c3e50, #4a6491);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+        
+        .btn:hover {
+            background: linear-gradient(90deg, #4a6491, #2c3e50);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn i {
+            margin-right: 10px;
+        }
+        
+        .result-box {
+            background: #f0f8ff;
+            border-left: 5px solid #4CAF50;
+            padding: 20px;
+            margin-top: 25px;
+            border-radius: 0 10px 10px 0;
+            display: none;
+        }
+        
+        .result-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .result-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin: 10px 0;
+            padding: 10px 0;
+            border-bottom: 2px dashed #ddd;
+        }
+        
+        .note {
+            background: #fff8e1;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        .note-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .info-section {
+            background: #f5f5f5;
+            padding: 30px;
+            border-top: 2px solid #e0e0e0;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .info-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .info-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+        
+        .info-card ul {
+            padding-left: 20px;
+        }
+        
+        .info-card li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+        }
+        
+        .contact-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .contact-card h3 {
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        
+        .whatsapp-btn {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+            transform: scale(1.05);
+        }
+        
+        .whatsapp-btn i {
+            margin-left: 10px;
+        }
+        
+        .persian {
+            direction: rtl;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .cable-icon {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #4CAF50;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            color: white;
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .instructions {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .instructions h2 {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .instructions ol {
+            padding-left: 25px;
+        }
+        
+        .instructions li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+            padding: 2px 8px;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+        
+        .page {
+            display: none;
+        }
+        
+        .page.active {
+            display: block;
+        }
+        
+        /* استایل‌های ماشین حساب اقتصادی */
+        .pv-calculator {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 10px;
+            background-color: #f5f5f5;
+            color: #333;
+            font-size: 14px;
+        }
+        
+        .pv-container {
+            max-width: 100%;
+            margin: 0 auto;
+            background-color: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        
+        .pv-calculator h1 {
+            color: #2e7d32;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+        
+        .pv-contact {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .pv-contact a {
+            color: #25D366;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        
+        .pv-input-section {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .pv-input-group {
+            margin-bottom: 10px;
+            background-color: #f9f9f9;
+            padding: 8px;
+            border-radius: 5px;
+        }
+        
+        .pv-calculator label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #2e7d32;
+            font-size: 0.9rem;
+        }
+        
+        .pv-hint {
+            font-size: 0.7rem;
+            color: #666;
+            margin-top: 3px;
+        }
+        
+        .pv-calculator input, .pv-calculator select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+        
+        .pv-calculator button {
+            background-color: #2e7d32;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin: 15px auto;
+            display: block;
+            width: 100%;
+            max-width: 300px;
+        }
+        
+        .pv-calculator button:hover {
+            background-color: #1b5e20;
+        }
+        
+        .pv-calculator table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 0.8rem;
+        }
+        
+        .pv-calculator th, .pv-calculator td {
+            border: 1px solid #ddd;
+            padding: 6px;
+            text-align: center;
+        }
+        
+        .pv-calculator th {
+            background-color: #2e7d32;
+            color: white;
+            font-size: 0.8rem;
+        }
+        
+        .pv-calculator tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        .pv-result-section {
+            margin-top: 20px;
+        }
+        
+        .pv-summary {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #e8f5e9;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+        
+        .pv-bold {
+            font-weight: bold;
+        }
+        
+        .pv-capacity-hint {
+            color: #999;
+            font-size: 0.7rem;
+            margin-top: 3px;
+        }
+        
+        /* بهبودهای خاص برای موبایل */
+        @media (min-width: 600px) {
+            .pv-input-section {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+            .pv-calculator body {
+                padding: 20px;
+                font-size: 16px;
+            }
+            .pv-container {
+                padding: 15px;
+            }
+            .pv-calculator table {
+                font-size: 14px;
+            }
+            .pv-calculator th, .pv-calculator td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body class="persian">
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-solar-panel"></i>
+                <div class="logo-text">ارج ارتباط <span>سبز</span></div>
+            </div>
+            
+            <nav>
+                <a href="#" class="nav-link active" data-page="home">صفحه نخست</a>
+                <a href="#" class="nav-link" data-page="services">خدمات ما</a>
+                <a href="#" class="nav-link" data-page="technical">محاسبات فنی</a>
+                <a href="#" class="nav-link" data-page="economic">محاسبه اقتصادی</a>
+                <a href="#" class="nav-link" data-page="contact">ارتباط با ما</a>
+            </nav>
+            
+            <div class="language-selector">
+                <button class="lang-btn active" data-lang="fa">فارسی</button>
+                <button class="lang-btn" data-lang="en">English</button>
+                <button class="lang-btn" data-lang="de">Deutsch</button>
+            </div>
+        </header>
+        
+        <!-- صفحه اصلی -->
+        <div id="home" class="page active">
+            <div class="page-content">
+                <h1 class="page-title"><i class="fas fa-home"></i> درباره شرکت ارج ارتباط سبز</h1>
+                
+                <div class="content-box">
+                    <p>شرکت ما فعالیت خود را از سال ۱۳۹۶ با تمرکز بر اجرای پروژه‌های برق و انرژی‌های تجدیدپذیر آغاز کرد و با انجام پروژه‌های مختلف صنعتی، اداری و شخصی در بازه‌های توان ۵ کیلووات تا ۱ مگاوات، جایگاه خود را در صنعت فتوولتائیک و مهندسی برق تثبیت نمود.</p>
+                    
+                    <p>از همان ابتدا، رویکرد ما تلفیقی از تجربه اجرایی، تحقیق و پژوهش علمی بوده و تلاش کردیم پروژه‌ها را نه تنها به صورت عملی، بلکه مبتنی بر مطالعات فنی و استانداردهای بین‌المللی به انجام برسانیم.</p>
+                    
+                    <p>با بهره‌گیری از تیمی متخصص شامل مهندسان آموزش دیده در آکادمی‌های معتبر داخلی و خارجی، توانستیم سطح علمی و اجرایی خود را به طور مداوم ارتقا دهیم.</p>
+                    
+                    <p>امروز، شرکت ما با اتکا به دانش روز، رعایت اصول مهندسی و توجه ویژه به استانداردهای ملی و بین‌المللی، پروژه‌های خود را با بالاترین کیفیت و تعهد به محیط زیست و مصرف بهینه انرژی اجرا می‌کند و همواره در مسیر رشد پایدار و نوآوری گام برمی‌دارد.</p>
+                </div>
+                
+                <div class="content-box">
+                    <h2><i class="fas fa-bullseye"></i> چشم‌انداز و ماموریت ما</h2>
+                    <p>ماموریت ما ارائه راهکارهای نوین در حوزه انرژی‌های تجدیدپذیر با هدف کاهش مصرف انرژی‌های فسیلی و حفاظت از محیط زیست است. ما با ارائه خدمات مهندسی برق و سیستم‌های فتوولتائیک، به مشتریان خود کمک می‌کنیم تا ضمن کاهش هزینه‌های انرژی، نقش خود را در حفظ محیط زیست ایفا کنند.</p>
+                    
+                    <p>چشم‌انداز ما تبدیل شدن به یکی از شرکت‌های پیشرو در زمینه انرژی‌های تجدیدپذیر در سطح منطقه و ارائه راهکارهای جامع و پایدار برای چالش‌های انرژی در آینده است.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- صفحه خدمات -->
+        <div id="services" class="page">
+            <div class="page-content">
+                <h1 class="page-title"><i class="fas fa-cogs"></i> خدمات شرکت ارج ارتباط سبز</h1>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3><i class="fas fa-solar-panel"></i> طراحی و نصب سیستم‌های فتوولتائیک</h3>
+                        <p>آنالیز و طراحی تمامی سیستم‌های فتوولتائیک از ظرفیت کیلوواتی تا مگاواتی با استفاده از تجهیزات روز دنیا و با رعایت استانداردهای بین‌المللی</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <h3><i class="fas fa-file-contract"></i> طرح توجیهی و طرح اتصال به شبکه</h3>
+                        <p>ارائه طرح‌های توجیهی جهت اخذ وام و ارائه طرح اتصال به شبکه برای شرکت‌های توزیع برق با تضمین پذیرش طرح</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <h3><i class="fas fa-bolt"></i> مشاوره و نظارت سیستم‌های الکتریکی</h3>
+                        <p>طراحی، مشاوره و اجرای سیستم‌های الکتریکی شامل خدمات مختلف در زمینه مهندسی برق، ارتینگ و صاعقه‌گیر</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <h3><i class="fas fa-tools"></i> خدمات پس از فروش</h3>
+                        <p>خدمات گارانتی و بازدیدهای دوره‌ای جهت سیستم‌های فتوولتائیک با استفاده از تجهیزات پیشرفته روز دنیا</p>
+                    </div>
+                </div>
+                
+                <div class="content-box">
+                    <h2><i class="fas fa-medal"></i> مزایای استفاده از خدمات ما</h2>
+                    <ul>
+                        <li>استفاده از تجهیزات با کیفیت و استاندارد بین‌المللی</li>
+                        <li>طراحی و اجرا توسط تیم مهندسی مجرب و آموزش دیده</li>
+                        <li>پشتیبانی و خدمات پس از فروش 24 ماهه</li>
+                        <li>ارائه گزارش عملکرد ماهانه سیستم‌های نصب شده</li>
+                        <li>ضمانت بازدهی سیستم‌های خورشیدی</li>
+                        <li>ارائه راهکارهای بهینه برای کاهش هزینه‌های اجرایی</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- صفحه محاسبات فنی -->
+        <div id="technical" class="page">
+            <div class="page-content">
+                <h1 class="page-title"><i class="fas fa-calculator"></i> محاسبات فنی کابل‌های برق</h1>
+                
+                <div class="instructions">
+                    <h2><i class="fas fa-info-circle"></i> راهنمای استفاده از ماشین حساب کابل</h2>
+                    <ol>
+                        <li><span class="highlight">محاسبه از اندازه کابل</span>: اندازه کابل و نوع نصب را انتخاب کنید تا حداکثر جریان و رتبه فیوز توصیه شده محاسبه شود.</li>
+                        <li><span class="highlight">محاسبه از جریان</span>: جریان مورد نیاز خود را وارد کرده و نوع نصب را انتخاب کنید تا حداقل اندازه کابل و رتبه فیوز توصیه شده را بیابید.</li>
+                        <li>تمام محاسبات بر اساس کابل‌های مسی در دمای 25 درجه سانتیگراد برای جریان متناوب است.</li>
+                    </ol>
+                </div>
+                
+                <div class="calculator-container">
+                    <!-- ماشین حساب 1: از اندازه کابل -->
+                    <div class="calculator-card">
+                        <div class="card-header">
+                            <i class="fas fa-wire"></i>
+                            <h2 class="card-title">محاسبه از اندازه کابل</h2>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="cableSize"><i class="fas fa-ruler"></i> مقطع کابل (mm²)</label>
+                            <select id="cableSize">
+                                <option value="">اندازه کابل را انتخاب کنید</option>
+                                <option value="1.5">1.5 mm²</option>
+                                <option value="2.5">2.5 mm²</option>
+                                <option value="4">4 mm²</option>
+                                <option value="6">6 mm²</option>
+                                <option value="10">10 mm²</option>
+                                <option value="16">16 mm²</option>
+                                <option value="25">25 mm²</option>
+                                <option value="35">35 mm²</option>
+                                <option value="50">50 mm²</option>
+                                <option value="70">70 mm²</option>
+                                <option value="95">95 mm²</option>
+                                <option value="120">120 mm²</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="installationType1"><i class="fas fa-home"></i> نوع نصب</label>
+                            <select id="installationType1">
+                                <option value="">نوع نصب را انتخاب کنید</option>
+                                <option value="A">در دیوارهای عایق حرارتی</option>
+                                <option value="B">در مجرا یا کانال</option>
+                                <option value="C">روی گچ یا زیر سقف</option>
+                            </select>
+                        </div>
+                        
+                        <button class="btn" onclick="calculateFromCable()">
+                            <i class="fas fa-bolt"></i> محاسبه جریان و فیوز
+                        </button>
+                        
+                        <div id="result1" class="result-box">
+                            <h3 class="result-title"><i class="fas fa-chart-line"></i> نتایج محاسبات</h3>
+                            <p>حداکثر جریان: <span id="maxCurrent" class="result-value">-</span></p>
+                            <p>رتبه فیوز توصیه شده: <span id="fuseRating" class="result-value">-</span></p>
+                        </div>
+                    </div>
+                    
+                    <!-- ماشین حساب 2: از جریان -->
+                    <div class="calculator-card">
+                        <div class="card-header">
+                            <i class="fas fa-bolt"></i>
+                            <h2 class="card-title">محاسبه از جریان</h2>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="currentInput"><i class="fas fa-bolt"></i> جریان (آمپر)</label>
+                            <input type="number" id="currentInput" placeholder="جریان را وارد کنید" min="1" step="0.1">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="installationType2"><i class="fas fa-home"></i> نوع نصب</label>
+                            <select id="installationType2">
+                                <option value="">نوع نصب را انتخاب کنید</option>
+                                <option value="A">در دیوارهای عایق حرارتی</option>
+                                <option value="B">در مجرا یا کانال</option>
+                                <option value="C">روی گچ یا زیر سقف</option>
+                            </select>
+                        </div>
+                        
+                        <button class="btn" onclick="calculateFromCurrent()">
+                            <i class="fas fa-wire"></i> محاسبه اندازه کابل
+                        </button>
+                        
+                        <div id="result2" class="result-box">
+                            <h3 class="result-title"><i class="fas fa-chart-line"></i> نتایج محاسبات</h3>
+                            <p>اندازه کابل مورد نیاز: <span id="cableResult" class="result-value">-</span></p>
+                            <p>رتبه فیوز توصیه شده: <span id="fuseResult" class="result-value">-</span></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="note">
+                    <h3 class="note-title"><i class="fas fa-exclamation-triangle"></i> نکات مهم</h3>
+                    <p>• تمام مقادیر برای کابل‌های مسی در دمای 25 درجه سانتیگراد برای جریان متناوب است</p>
+                    <p>• برای کابل‌های ≥70mm²، استفاده از یک سایز بزرگتر را در نظر بگیرید</p>
+                    <p>• ملاحظات افت ولتاژ ممکن است نیاز به کابل‌های بزرگتر داشته باشد</p>
+                    <p>• تمام اطلاعات بدون ضمانت ارائه می‌شود</p>
+                </div>
+                
+                <div class="info-section">
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <h3><i class="fas fa-info-circle"></i> انواع نصب</h3>
+                            <ul>
+                                <li><strong>A: در دیوارهای عایق حرارتی</strong> - کابل‌های نصب شده در دیوارهای با عایق حرارتی</li>
+                                <li><strong>B: در مجرا یا کانال</strong> - کابل‌های نصب شده در مجراهای محافظ یا کانال‌های کابل</li>
+                                <li><strong>C: روی گچ یا زیر سقف</strong> - کابل‌های نصب شده روی سطح یا آنهایی که روی سقف نصب شده‌اند</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="info-card">
+                            <h3><i class="fas fa-lightbulb"></i> اطلاعات ایمنی</h3>
+                            <ul>
+                                <li>• همیشه از رتبه فیوز صحیح برای جلوگیری از گرم شدن بیش از حد استفاده کنید</li>
+                                <li>• برای برنامه‌های حیاتی، با برقکار معتبر مشورت کنید</li>
+                                <li>• کدها و مقررات برق محلی را در نظر بگیرید</li>
+                                <li>• به طور منظم تاسیسات برق را برای ایمنی بازرسی کنید</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="info-card">
+                            <h3><i class="fas fa-history"></i> درباره این ماشین حساب</h3>
+                            <ul>
+                                <li>• بر اساس استانداردهای DIN/VDE برای کابل‌های مسی</li>
+                                <li>• توسعه یافته برای متخصصان برق و علاقه‌مندان به DIY</li>
+                                <li>• بخشی از مجموعه ابزارهای برق ارج ارتباط سبز</li>
+                                <li>• محاسبات دقیق برای نصب ایمن برق</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- صفحه محاسبه اقتصادی -->
+        <div id="economic" class="page">
+            <div class="page-content">
+                <h1 class="page-title"><i class="fas fa-chart-line"></i> محاسبه اقتصادی نیروگاه خورشیدی</h1>
+                
+                <div class="pv-calculator">
+                    <div class="pv-container">
+                        <h1>شرکت ارج ارتباط سبز - محاسبه درآمد نیروگاه خورشیدی</h1>
+                        <div class="pv-contact">پشتیبانی: <a href="https://wa.me/+989155859703" target="_blank">واتساپ</a></div>
+                        
+                        <div class="pv-input-section">
+                            <div>
+                                <div class="pv-input-group">
+                                    <label for="capacity">ظرفیت نیروگاه (کیلووات)</label>
+                                    <select id="capacity" onchange="updateCapacityDependentFields()">
+                                        <option value="5">5 کیلووات</option>
+                                        <option value="10">10 کیلووات</option>
+                                        <option value="20">20 کیلووات</option>
+                                        <option value="50">50 کیلووات</option>
+                                        <option value="100" selected>100 کیلووات</option>
+                                        <option value="200">200 کیلووات</option>
+                                        <option value="500">500 کیلووات</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="pv-input-group">
+                                    <label for="subscription">ظرفیت انشعاب</label>
+                                    <input type="text" id="subscription" readonly>
+                                </div>
+                                
+                                <div class="pv-input-group">
+                                    <label for="investment">میزان سرمایه گذاری (ریال)</label>
+                                    <input type="text" id="investment" value="33,000,000,000" oninput="formatInvestmentInput()">
+                                    <div id="investmentHint" class="pv-capacity-hint">پیشنهاد برای 100 کیلووات: 33,000,000,000 ریال</div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="pv-input-group">
+                                    <label for="guaranteedRate">نرخ خرید تضمینی (ریال)</label>
+                                    <input type="number" id="guaranteedRate" value="38200">
+                                    <div class="pv-hint">قابلیت فروش در بورس انرژی هم دارد</div>
+                                </div>
+                                
+                                <div class="pv-input-group">
+                                    <label for="adjustmentFactor">ضریب تعدیل سالیانه</label>
+                                    <input type="number" id="adjustmentFactor" step="0.01" value="0.3">
+                                    <div class="pv-hint">معمولا بین 0 تا 0.4</div>
+                                </div>
+                                
+                                <div class="pv-input-group">
+                                    <label for="tax">مالیات</label>
+                                    <input type="text" id="tax" value="معاف" readonly>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="pv-input-group">
+                                    <label for="loanAmount">تسهیلات (ریال)</label>
+                                    <input type="text" id="loanAmount" value="10,000,000,000" oninput="formatLoanInput()">
+                                </div>
+                                
+                                <div class="pv-input-group">
+                                    <label for="loanInterest">نرخ سود تسهیلات (%)</label>
+                                    <input type="number" id="loanInterest" step="0.01" value="8">
+                                </div>
+                                
+                                <div class="pv-input-group">
+                                    <label for="loanTerm">زمان بازپرداخت تسهیلات (سال)</label>
+                                    <input type="number" id="loanTerm" value="5">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button onclick="calculatePV()">محاسبه</button>
+                        
+                        <div class="pv-result-section">
+                            <h2>نتایج محاسبات 20 ساله</h2>
+                            <table id="resultsTable">
+                                <thead>
+                                    <tr>
+                                        <th>سال</th>
+                                        <th>میانگین تابش</th>
+                                        <th>انرژی تولیدی سالانه (Kwh)</th>
+                                        <th>ضریب کاهش نرخ خرید</th>
+                                        <th>ضریب تعدیل سالیانه</th>
+                                        <th>نرخ فروش برق (ریال)</th>
+                                        <th>درآمد فروش سالانه (ریال)</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="resultsBody">
+                                    <!-- Results will be inserted here -->
+                                </tbody>
+                            </table>
+                            
+                            <div class="pv-summary">
+                                <h3>خلاصه نتایج</h3>
+                                <p class="pv-bold">درآمد سال اول: <span id="firstYearIncome"></span></p>
+                                <p class="pv-bold">زمان بازگشت سرمایه: <span id="paybackPeriod"></span></p>
+                                <p>قسط ماهانه: <span id="monthlyPayment"></span></p>
+                                <p>قسط سالانه: <span id="annualPayment"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- صفحه ارتباط با ما -->
+        <div id="contact" class="page">
+            <div class="page-content">
+                <h1 class="page-title"><i class="fas fa-address-card"></i> ارتباط با شرکت ارج ارتباط سبز</h1>
+                
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> آدرس دفتر مرکزی</h3>
+                        <p>تهران، خیابان آزادی، خیابان جاوید بیژن، پلاک 123</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <h3><i class="fas fa-phone"></i> تلفن‌های تماس</h3>
+                        <p>تلفن: 021-12345678</p>
+                        <p>فکس: 021-87654321</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <h3><i class="fas fa-envelope"></i> پست الکترونیک</h3>
+                        <p>info@arj-ertebatsabz.ir</p>
+                        <p>support@arj-ertebatsabz.ir</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <h3><i class="fab fa-whatsapp"></i> ارتباط از طریق واتساپ</h3>
+                        <p>برای دریافت مشاوره تخصصی و اطلاعات بیشتر با ما در ارتباط باشید</p>
+                        <a href="https://wa.me/+989155859703" class="whatsapp-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> ارتباط در واتساپ
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="content-box">
+                    <h2><i class="fas fa-clock"></i> ساعات کاری</h2>
+                    <p>شنبه تا چهارشنبه: 8:30 صبح تا 16:30 بعدازظهر</p>
+                    <p>پنجشنبه: 8:30 صبح تا 12:30 ظهر</p>
+                    <p>جمعه: تعطیل</p>
+                </div>
+                
+                <div class="content-box">
+                    <h2><i class="fas fa-comments"></i> فرم درخواست مشاوره</h2>
+                    <p>برای دریافت مشاوره رایگان، فرم زیر را پر کنید تا کارشناسان ما در اسرع وقت با شما تماس بگیرند.</p>
+                    
+                    <form style="margin-top: 20px;">
+                        <div class="form-group">
+                            <label for="name">نام و نام خانوادگی</label>
+                            <input type="text" id="name" placeholder="نام خود را وارد کنید">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">شماره تماس</label>
+                            <input type="tel" id="phone" placeholder="شماره تماس خود را وارد کنید">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">پست الکترونیک</label>
+                            <input type="email" id="email" placeholder="ایمیل خود را وارد کنید">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">پیام شما</label>
+                            <textarea id="message" rows="4" placeholder="پیام خود را اینجا بنویسید..."></textarea>
+                        </div>
+                        
+                        <button class="btn">
+                            <i class="fas fa-paper-plane"></i> ارسال درخواست
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p><i class="fas fa-copyright"></i> 2023 شرکت ارج ارتباط سبز | ابزارهای حرفه‌ای انرژی خورشیدی</p>
+        </footer>
+    </div>
+
+    <script>
+        // داده‌های کابل بر اساس مشخصات ارائه شده
+        const cableData = {
+            '1.5': { A: { current: 16.5, fuse: 16 }, B: { current: 17.5, fuse: 16 }, C: { current: 21, fuse: 20 } },
+            '2.5': { A: { current: 19.5, fuse: 16 }, B: { current: 24, fuse: 20 }, C: { current: 29, fuse: 25 } },
+            '4': { A: { current: 27, fuse: 25 }, B: { current: 32, fuse: 32 }, C: { current: 38, fuse: 35 } },
+            '6': { A: { current: 34, fuse: 32 }, B: { current: 40, fuse: 40 }, C: { current: 49, fuse: 40 } },
+            '10': { A: { current: 46, fuse: 40 }, B: { current: 55, fuse: 50 }, C: { current: 67, fuse: 63 } },
+            '16': { A: { current: 60, fuse: 50 }, B: { current: 73, fuse: 63 }, C: { current: 90, fuse: 80 } },
+            '25': { A: { current: 80, fuse: 80 }, B: { current: 95, fuse: 80 }, C: { current: 119, fuse: 100 } },
+            '35': { A: { current: 98, fuse: 80 }, B: { current: 118, fuse: 100 }, C: { current: 146, fuse: 125 } },
+            '50': { A: { current: 117, fuse: 100 }, B: { current: 141, fuse: 125 }, C: { current: 178, fuse: 160 } },
+            '70': { A: { current: 147, fuse: 125 }, B: { current: 178, fuse: 160 }, C: { current: 226, fuse: 200 } },
+            '95': { A: { current: 177, fuse: 160 }, B: { current: 213, fuse: 200 }, C: { current: 273, fuse: 250 } },
+            '120': { A: { current: 204, fuse: 200 }, B: { current: 248, fuse: 200 }, C: { current: 317, fuse: 300 } }
+        };
+        
+        // داده‌های ترجمه
+        const translations = {
+            en: {
+                "home": "Home",
+                "services": "Services",
+                "technical": "Technical Calculations",
+                "economic": "Economic Calculation",
+                "contact": "Contact Us",
+                "instructions-title": "How to Use This Cable Calculator",
+                "instruction-1": "<span class='highlight'>From Cable Size</span>: Select your cable size and installation type to calculate the maximum current and recommended fuse rating.",
+                "instruction-2": "<span class='highlight'>From Current</span>: Enter your required current and select installation type to find the minimum cable size and recommended fuse rating.",
+                "instruction-3": "All calculations are based on copper cables at 25°C for AC current.",
+                "calc-from-cable": "Calculate from Cable Size",
+                "cable-size": "Cable Cross-Section (mm²)",
+                "select-cable": "Select cable size",
+                "install-type": "Installation Type",
+                "select-install": "Select installation type",
+                "install-A": "In thermally insulated walls",
+                "install-B": "In conduit or trunking",
+                "install-C": "On plaster or under ceiling",
+                "calc-current": "Calculate Current & Fuse",
+                "calc-results": "Calculation Results",
+                "max-current": "Maximum Current",
+                "rec-fuse": "Recommended Fuse Rating",
+                "calc-from-current": "Calculate from Current",
+                "current": "Current (Amperes)",
+                "calc-cable": "Calculate Cable Size",
+                "req-cable": "Required Cable Size",
+                "important-notes": "Important Notes",
+                "note-1": "• All values are for copper cables at 25°C for AC current",
+                "note-2": "• For cable sizes ≥70mm², consider using one size larger",
+                "note-3": "• Voltage drop considerations may require larger cables",
+                "note-4": "• All information is provided without warranty",
+                "install-types": "Installation Types",
+                "type-A": "<strong>A: In thermally insulated walls</strong> - Cables installed in walls with thermal insulation",
+                "type-B": "<strong>B: In conduit or trunking</strong> - Cables installed in protective conduits or cable channels",
+                "type-C": "<strong>C: On plaster or under ceiling</strong> - Surface-mounted cables or those installed on ceilings",
+                "safety-title": "Safety Information",
+                "safety-1": "• Always use the correct fuse rating to prevent overheating",
+                "safety-2": "• For critical applications, consult a certified electrician",
+                "safety-3": "• Consider local electrical codes and regulations",
+                "safety-4": "• Regularly inspect electrical installations for safety",
+                "about-title": "About This Calculator",
+                "about-1": "• Based on DIN/VDE standards for copper cables",
+                "about-2": "• Developed for electrical professionals and DIY enthusiasts",
+                "about-3": "• Part of Arj Ertebat Sabz electrical tools collection",
+                "about-4": "• Accurate calculations for safe electrical installations",
+                "footer-note": "Professional Electrical Tools"
+            },
+            fa: {
+                "home": "صفحه نخست",
+                "services": "خدمات ما",
+                "technical": "محاسبات فنی",
+                "economic": "محاسبه اقتصادی",
+                "contact": "ارتباط با ما",
+                "instructions-title": "نحوه استفاده از ماشین حساب کابل",
+                "instruction-1": "<span class='highlight'>از اندازه کابل</span>: اندازه کابل و نوع نصب را انتخاب کنید تا حداکثر جریان و رتبه فیوز توصیه شده محاسبه شود.",
+                "instruction-2": "<span class='highlight'>از جریان</span>: جریان مورد نیاز خود را وارد کرده و نوع نصب را انتخاب کنید تا حداقل اندازه کابل و رتبه فیوز توصیه شده را بیابید.",
+                "instruction-3": "تمام محاسبات بر اساس کابل های مسی در دمای 25 درجه سانتیگراد برای جریان متناوب است.",
+                "calc-from-cable": "محاسبه از اندازه کابل",
+                "cable-size": "مقطع کابل (mm²)",
+                "select-cable": "اندازه کابل را انتخاب کنید",
+                "install-type": "نوع نصب",
+                "select-install": "نوع نصب را انتخاب کنید",
+                "install-A": "در دیوارهای عایق حرارتی",
+                "install-B": "در مجرا یا کانال",
+                "install-C": "روی گچ یا زیر سقف",
+                "calc-current": "محاسبه جریان و فیوز",
+                "calc-results": "نتایج محاسبات",
+                "max-current": "حداکثر جریان",
+                "rec-fuse": "رتبه فیوز توصیه شده",
+                "calc-from-current": "محاسبه از جریان",
+                "current": "جریان (آمپر)",
+                "calc-cable": "محاسبه اندازه کابل",
+                "req-cable": "اندازه کابل مورد نیاز",
+                "important-notes": "یادداشت های مهم",
+                "note-1": "• تمام مقادیر برای کابل های مسی در دمای 25 درجه سانتیگراد برای جریان متناوب است",
+                "note-2": "• برای کابل های ≥70mm²، استفاده از یک سایز بزرگتر را در نظر بگیرید",
+                "note-3": "• ملاحظات افت ولتاژ ممکن است نیاز به کابل های بزرگتر داشته باشد",
+                "note-4": "• تمام اطلاعات بدون ضمانت ارائه می شود",
+                "install-types": "انواع نصب",
+                "type-A": "<strong>A: در دیوارهای عایق حرارتی</strong> - کابل های نصب شده در دیوارهای با عایق حرارتی",
+                "type-B": "<strong>B: در مجرا یا کانال</strong> - کابل های نصب شده در مجراهای محافظ یا کانال های کابل",
+                "type-C": "<strong>C: روی گچ یا زیر سقف</strong> - کابل های نصب شده روی سطح یا آنهایی که روی سقف نصب شده اند",
+                "safety-title": "اطلاعات ایمنی",
+                "safety-1": "• همیشه از رتبه فیوز صحیح برای جلوگیری از گرم شدن بیش از حد استفاده کنید",
+                "safety-2": "• برای برنامه های حیاتی، با برقکار معتبر مشورت کنید",
+                "safety-3": "• کدها و مقررات برق محلی را در نظر بگیرید",
+                "safety-4": "• به طور منظم تاسیسات برق را برای ایمنی بازرسی کنید",
+                "about-title": "درباره این ماشین حساب",
+                "about-1": "• بر اساس استانداردهای DIN/VDE برای کابل های مسی",
+                "about-2": "• توسعه یافته برای متخصصان برق و علاقه مندان به DIY",
+                "about-3": "• بخشی از مجموعه ابزارهای برق ارژ ارتباط سبز",
+                "about-4": "• محاسبات دقیق برای نصب ایمن برق",
+                "footer-note": "ابزارهای حرفه ای برق"
+            },
+            de: {
+                "home": "Startseite",
+                "services": "Dienstleistungen",
+                "technical": "Technische Berechnungen",
+                "economic": "Wirtschaftlichkeitsberechnung",
+                "contact": "Kontakt",
+                "instructions-title": "So verwenden Sie diesen Kabelrechner",
+                "instruction-1": "<span class='highlight'>Von Kabelgröße</span>: Wählen Sie Ihre Kabelgröße und Installationsart aus, um den maximalen Strom und die empfohlene Sicherungsbewertung zu berechnen.",
+                "instruction-2": "<span class='highlight'>Von Strom</span>: Geben Sie Ihren erforderlichen Strom ein und wählen Sie den Installationstyp, um die minimale Kabelgröße und die empfohlene Sicherungsbewertung zu ermitteln.",
+                "instruction-3": "Alle Berechnungen basieren auf Kupferkabeln bei 25°C für Wechselstrom.",
+                "calc-from-cable": "Aus Kabelgröße berechnen",
+                "cable-size": "Kabelquerschnitt (mm²)",
+                "select-cable": "Kabelgröße auswählen",
+                "install-type": "Installationsart",
+                "select-install": "Installationsart auswählen",
+                "install-A": "In wärmegedämmten Wänden",
+                "install-B": "In Installationskanal oder Rohr",
+                "install-C": "Auf Putz oder unter der Decke",
+                "calc-current": "Strom & Sicherung berechnen",
+                "calc-results": "Berechnungsergebnisse",
+                "max-current": "Maximaler Strom",
+                "rec-fuse": "Empfohlene Sicherungsbewertung",
+                "calc-from-current": "Aus Strom berechnen",
+                "current": "Strom (Ampere)",
+                "calc-cable": "Kabelgröße berechnen",
+                "req-cable": "Erforderliche Kabelgröße",
+                "important-notes": "Wichtige Hinweise",
+                "note-1": "• Alle Angaben gelten für Kupferkabel bei 25°C für Wechselstrom",
+                "note-2": "• Für Kabel ≥70mm² sollte eine Querschnittsstufe höher gewählt werden",
+                "note-3": "• Spannungsabfall kann größere Kabel erfordern",
+                "note-4": "• Alle Angaben ohne Gewähr",
+                "install-types": "Installationsarten",
+                "type-A": "<strong>A: In wärmegedämmten Wänden</strong> - Kabel in wärmegedämmten Wänden verlegt",
+                "type-B": "<strong>B: In Installationskanal oder Rohr</strong> - Kabel in Schutzrohren oder Kabelkanälen verlegt",
+                "type-C": "<strong>C: Auf Putz oder unter der Decke</strong> - Oberflächenverlegte Kabel oder unter der Decke verlegte Kabel",
+                "safety-title": "Sicherheitshinweise",
+                "safety-1": "• Verwenden Sie stets die richtige Sicherung, um Überhitzung zu vermeiden",
+                "safety-2": "• Für kritische Anwendungen einen zertifizierten Elektriker konsultieren",
+                "safety-3": "• Beachten Sie lokale Vorschriften und Normen",
+                "safety-4": "• Elektroinstallationen regelmäßig auf Sicherheit überprüfen",
+                "about-title": "Über diesen Rechner",
+                "about-1": "• Basierend auf DIN/VDE-Normen für Kupferkabel",
+                "about-2": "• Entwickelt für Elektrofachkräfte und Heimwerker",
+                "about-3": "• Teil der Arj Ertebat Sabz Elektrowerkzeugsammlung",
+                "about-4": "• Präzise Berechnungen für sichere Elektroinstallationen",
+                "footer-note": "Professionelle Elektrowerkzeuge"
+            }
+        };
+        
+        // تنظیم زبان اولیه
+        let currentLang = 'fa';
+        
+        // تابع تغییر زبان
+        function changeLanguage(lang) {
+            currentLang = lang;
+            
+            // به‌روزرسانی جهت UI برای فارسی
+            if (lang === 'fa') {
+                document.documentElement.setAttribute('dir', 'rtl');
+                document.documentElement.setAttribute('lang', 'fa');
+                document.body.classList.add('persian');
+            } else {
+                document.documentElement.setAttribute('dir', 'ltr');
+                document.documentElement.setAttribute('lang', lang);
+                document.body.classList.remove('persian');
+            }
+            
+            // به‌روزرسانی تمام عناصر قابل ترجمه
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    element.innerHTML = translations[lang][key];
+                }
+            });
+            
+            // به‌روزرسانی گزینه‌های انتخاب شده در کشویی‌ها
+            document.querySelectorAll('option[data-i18n]').forEach(option => {
+                const key = option.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    option.textContent = translations[lang][key];
+                }
+            });
+            
+            // به‌روزرسانی دکمه زبان فعال
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('data-lang') === lang) {
+                    btn.classList.add('active');
+                }
+            });
+        }
+        
+        // تنظیم دکمه‌های زبان
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                changeLanguage(btn.getAttribute('data-lang'));
+            });
+        });
+        
+        // محاسبه از اندازه کابل
+        function calculateFromCable() {
+            const cableSize = document.getElementById('cableSize').value;
+            const installType = document.getElementById('installationType1').value;
+            const resultBox = document.getElementById('result1');
+            
+            if (!cableSize || !installType) {
+                alert('لطفاً اندازه کابل و نوع نصب را انتخاب کنید');
+                return;
+            }
+            
+            const data = cableData[cableSize][installType];
+            
+            document.getElementById('maxCurrent').textContent = data.current + ' A';
+            document.getElementById('fuseRating').textContent = data.fuse + ' A';
+            resultBox.style.display = 'block';
+        }
+        
+        // محاسبه از جریان
+        function calculateFromCurrent() {
+            const current = parseFloat(document.getElementById('currentInput').value);
+            const installType = document.getElementById('installationType2').value;
+            const resultBox = document.getElementById('result2');
+            
+            if (!current || isNaN(current) || !installType) {
+                alert('لطفاً جریان را وارد کرده و نوع نصب را انتخاب کنید');
+                return;
+            }
+            
+            let requiredCable = null;
+            let fuseRating = null;
+            
+            // پیدا کردن کوچکترین کابل که بتواند جریان را تحمل کند
+            const cableSizes = Object.keys(cableData).sort((a, b) => parseFloat(a) - parseFloat(b));
+            
+            for (const size of cableSizes) {
+                if (cableData[size][installType].current >= current) {
+                    requiredCable = size;
+                    fuseRating = cableData[size][installType].fuse;
+                    break;
+                }
+            }
+            
+            if (requiredCable) {
+                document.getElementById('cableResult').textContent = requiredCable + ' mm²';
+                document.getElementById('fuseResult').textContent = fuseRating + ' A';
+                resultBox.style.display = 'block';
+            } else {
+                alert('هیچ کابلی در مشخصات ما نمی‌تواند این جریان را تحمل کند. لطفاً از کابل‌های بزرگتر از 120mm² استفاده کنید و با برقکار مشورت کنید.');
+            }
+        }
+        
+        // داده‌های ظرفیت وابسته
+        const capacityData = {
+            '5': {
+                investment: '2,000,000,000',
+                guaranteedRate: '38200',
+                subscription: '15 A تک فاز'
+            },
+            '10': {
+                investment: '3,800,000,000',
+                guaranteedRate: '38200',
+                subscription: '25 A تک فاز'
+            },
+            '20': {
+                investment: '7,000,000,000',
+                guaranteedRate: '38200',
+                subscription: '25 A سه فاز'
+            },
+            '50': {
+                investment: '16,000,000,000',
+                guaranteedRate: '38200',
+                subscription: '63 A سه فاز'
+            },
+            '100': {
+                investment: '33,000,000,000',
+                guaranteedRate: '38200',
+                subscription: '100 A سه فاز'
+            },
+            '200': {
+                investment: '65,000,000,000',
+                guaranteedRate: '38200',
+                subscription: '170 A سه فاز'
+            },
+            '500': {
+                investment: '150,000,000,000',
+                guaranteedRate: '31500',
+                subscription: '400 A سه فاز'
+            }
+        };
+
+        function updateCapacityDependentFields() {
+            const capacity = document.getElementById('capacity').value;
+            const data = capacityData[capacity];
+            
+            document.getElementById('investment').value = data.investment;
+            document.getElementById('guaranteedRate').value = data.guaranteedRate;
+            document.getElementById('subscription').value = data.subscription;
+            
+            // به‌روزرسانی راهنما
+            document.getElementById('investmentHint').textContent = 
+                `پیشنهاد برای ${capacity} کیلووات: ${data.investment} ریال`;
+        }
+
+        function formatNumberInput(input) {
+            // حذف کاراکترهای غیرعددی
+            let value = input.value.replace(/[^0-9]/g, '');
+            
+            // قالب‌بندی با کاما
+            if (value.length > 0) {
+                value = parseInt(value).toLocaleString('en-US');
+            }
+            
+            input.value = value;
+            return value.replace(/,/g, '');
+        }
+
+        function formatInvestmentInput() {
+            formatNumberInput(document.getElementById('investment'));
+        }
+
+        function formatLoanInput() {
+            formatNumberInput(document.getElementById('loanAmount'));
+        }
+
+        function calculatePV() {
+            // دریافت مقادیر ورودی
+            const capacity = parseFloat(document.getElementById('capacity').value);
+            const investment = parseFloat(document.getElementById('investment').value.replace(/,/g, ''));
+            const guaranteedRate = parseFloat(document.getElementById('guaranteedRate').value);
+            const adjustmentFactor = parseFloat(document.getElementById('adjustmentFactor').value);
+            const loanAmount = parseFloat(document.getElementById('loanAmount').value.replace(/,/g, ''));
+            const loanInterest = parseFloat(document.getElementById('loanInterest').value) / 100;
+            const loanTerm = parseInt(document.getElementById('loanTerm').value);
+            
+            // محاسبه پرداخت ماهانه
+            const monthlyInterest = loanInterest / 12;
+            const numberOfPayments = loanTerm * 12;
+            const monthlyPayment = (loanAmount * monthlyInterest) / (1 - Math.pow(1 + monthlyInterest, -numberOfPayments));
+            const annualPayment = monthlyPayment * 12;
+            
+            // به‌روزرسانی خلاصه
+            document.getElementById('monthlyPayment').textContent = `${formatCurrency(monthlyPayment)} ریال`;
+            document.getElementById('annualPayment').textContent = `${formatCurrency(annualPayment)} ریال`;
+            
+            // محاسبه دوره بازگشت سرمایه و درآمد سال اول
+            const avgRadiation = 5.1;
+            const performanceFactor = 1;
+            const annualEnergy = avgRadiation * capacity * performanceFactor * 365;
+            const initialAnnualIncome = annualEnergy * guaranteedRate;
+            
+            document.getElementById('firstYearIncome').textContent = `${formatCurrency(initialAnnualIncome)} ریال`;
+            
+            let paybackYears = investment / initialAnnualIncome;
+            paybackYears = Math.ceil(paybackYears * 10) / 10; // گرد کردن به نزدیک‌ترین 0.1
+            
+            document.getElementById('paybackPeriod').textContent = `${paybackYears} سال`;
+            
+            // تولید جدول 20 ساله
+            const resultsBody = document.getElementById('resultsBody');
+            resultsBody.innerHTML = '';
+            
+            let currentRate = guaranteedRate;
+            let cumulativeIncome = 0;
+            
+            for (let year = 1405; year <= 1424; year++) {
+                // محاسبه مقادیر برای هر سال
+                const isReductionYear = year === 1412 || year === 1416 || year === 1420;
+                const reductionFactor = isReductionYear ? -0.6 : 0;
+                
+                // تنظیم نرخ
+                if (isReductionYear) {
+                    currentRate = (currentRate * 1.3) * 0.4;
+                } else if (year > 1405) {
+                    currentRate = currentRate + (currentRate * adjustmentFactor);
+                }
+                
+                const annualEnergyProd = avgRadiation * capacity * performanceFactor * 365;
+                const annualIncome = annualEnergyProd * currentRate;
+                cumulativeIncome += annualIncome;
+                
+                // ایجاد ردیف جدول
+                const row = document.createElement('tr');
+                
+                // برای نمایش موبایل
+                row.innerHTML = `
+                    <td data-label="سال">${year}</td>
+                    <td data-label="میانگین تابش">${avgRadiation.toFixed(1)}</td>
+                    <td data-label="انرژی تولیدی">${annualEnergyProd.toLocaleString()}</td>
+                    <td data-label="کاهش نرخ">${reductionFactor}</td>
+                    <td data-label="تعدیل سالیانه">${year > 1405 ? adjustmentFactor : 0}</td>
+                    <td data-label="نرخ فروش">${currentRate.toLocaleString()}</td>
+                    <td data-label="درآمد سالانه">${annualIncome.toLocaleString()}</td>
+                `;
+                
+                resultsBody.appendChild(row);
+            }
+        }
+        
+        function formatCurrency(value) {
+            return new Intl.NumberFormat('fa-IR').format(Math.round(value));
+        }
+        
+        // تغییر صفحات
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // حذف کلاس فعال از همه لینک‌ها
+                document.querySelectorAll('.nav-link').forEach(el => {
+                    el.classList.remove('active');
+                });
+                
+                // افزودن کلاس فعال به لینک فعلی
+                this.classList.add('active');
+                
+                // مخفی کردن همه صفحات
+                document.querySelectorAll('.page').forEach(page => {
+                    page.classList.remove('active');
+                });
+                
+                // نمایش صفحه انتخاب شده
+                const pageId = this.getAttribute('data-page');
+                document.getElementById(pageId).classList.add('active');
+            });
+        });
+        
+        // مقداردهی اولیه هنگام بارگذاری صفحه
+        window.onload = function() {
+            changeLanguage('fa');
+            updateCapacityDependentFields();
+        };
+    </script>
+</body>
+</html>
