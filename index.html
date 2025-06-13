@@ -84,31 +84,6 @@
             border: 2px solid #ffd700;
         }
         
-        .language-selector {
-            background: rgba(255, 255, 255, 0.15);
-            border-radius: 50px;
-            padding: 8px 15px;
-            display: flex;
-            gap: 10px;
-            backdrop-filter: blur(5px);
-        }
-        
-        .lang-btn {
-            background: transparent;
-            border: 2px solid transparent;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        
-        .lang-btn.active, .lang-btn:hover {
-            background: rgba(255, 255, 255, 0.25);
-            border-color: #ffd700;
-        }
-        
         .page-content {
             padding: 30px;
             min-height: 500px;
@@ -239,7 +214,7 @@
             padding: 14px;
             border: 2px solid #ddd;
             border-radius: 10px;
-            font-size: 1.1rem;
+            font-size: 16px;
             background: #f9f9f9;
             transition: all 0.3s ease;
         }
@@ -308,14 +283,6 @@
             padding: 20px;
             margin-top: 30px;
             border-radius: 0 10px 10px 0;
-        }
-        
-        .note-title {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 10px;
-            color: #2c3e50;
         }
         
         .info-section {
@@ -624,6 +591,304 @@
                 padding: 8px;
             }
         }
+        
+        /* استایل‌های جدید برای صفحه اصلی */
+        .home-intro {
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1564053489984-317bbd824340?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 50px 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .home-intro h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        
+        .home-intro p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            color: #333;
+        }
+        
+        .home-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .home-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .home-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .home-img {
+            height: 200px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .home-card-content {
+            padding: 20px;
+        }
+        
+        .home-card h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .home-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* استایل‌های جدید برای محاسبه‌گر سیستم مستقل */
+        .offgrid-calculator {
+            font-family: 'Vazirmatn', Tahoma, sans-serif;
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .offgrid-calculator:hover {
+            transform: translateY(-5px);
+        }
+        
+        .offgrid-calculator h2 {
+            color: #2c3e50;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #eee;
+            font-size: 1.6rem;
+        }
+        
+        .offgrid-input-group {
+            margin-bottom: 20px;
+        }
+        
+        .offgrid-label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+            color: #2c3e50;
+            font-size: 1.1rem;
+        }
+        
+        .offgrid-input, .offgrid-select {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #e1e5eb;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        .offgrid-input:focus, .offgrid-select:focus {
+            border-color: #27ae60;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.2);
+        }
+        
+        .offgrid-input[readonly] {
+            background-color: #f9f9f9;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .offgrid-hint {
+            color: #999;
+            font-size: 0.9rem;
+            margin-top: 5px;
+            font-style: italic;
+        }
+        
+        .offgrid-btn {
+            background: linear-gradient(to right, #27ae60, #2ecc71);
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 10px 5px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .offgrid-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+            background: linear-gradient(to right, #219653, #27ae60);
+        }
+        
+        .offgrid-button-group {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+        
+        .offgrid-result {
+            background-color: #eaf7f0;
+            border-left: 4px solid #27ae60;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+        
+        .offgrid-result h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        .offgrid-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .offgrid-table th, .offgrid-table td {
+            padding: 16px;
+            text-align: center;
+            border: 1px solid #e1e5eb;
+        }
+        
+        .offgrid-table th {
+            background: linear-gradient(to bottom, #f1f1f1, #e1e5eb);
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        
+        .offgrid-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .offgrid-table tr:hover {
+            background-color: #f0f8f4;
+        }
+        
+        .offgrid-support-note {
+            text-align: center;
+            background: linear-gradient(to right, #2c3e50, #34495e);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 40px;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        
+        .offgrid-note {
+            background-color: #fcf8e3;
+            border-left: 4px solid #f1c40f;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 6px;
+            font-size: 0.95rem;
+        }
+        
+        .offgrid-system-summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .offgrid-summary-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        
+        .offgrid-summary-card h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .offgrid-summary-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #27ae60;
+            margin: 10px 0;
+        }
+        
+        .offgrid-summary-unit {
+            color: #7f8c8d;
+            font-size: 1rem;
+        }
+        
+        /* استایل فوتر جدید */
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 30px;
+            background: #1a2a3a;
+            color: white;
+        }
+        
+        .footer-section {
+            text-align: center;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #27ae60;
+            font-size: 1.3rem;
+        }
+        
+        .footer-section p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+        
+        .footer-section a {
+            color: #27ae60;
+            text-decoration: none;
+        }
+        
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+        
+        .copyright {
+            background: #0e1a29;
+            padding: 20px;
+            text-align: center;
+            font-size: 1rem;
+        }
     </style>
 </head>
 <body class="persian">
@@ -636,21 +901,79 @@
             
             <nav>
                 <a href="#" class="nav-link active" data-page="home">صفحه نخست</a>
+                <a href="#" class="nav-link" data-page="about">درباره ما</a>
                 <a href="#" class="nav-link" data-page="services">خدمات ما</a>
                 <a href="#" class="nav-link" data-page="technical">محاسبات فنی</a>
                 <a href="#" class="nav-link" data-page="economic">محاسبه اقتصادی</a>
+                <a href="#" class="nav-link" data-page="offgrid">سیستم مستقل</a>
                 <a href="#" class="nav-link" data-page="contact">ارتباط با ما</a>
             </nav>
-            
-            <div class="language-selector">
-                <button class="lang-btn active" data-lang="fa">فارسی</button>
-                <button class="lang-btn" data-lang="en">English</button>
-                <button class="lang-btn" data-lang="de">Deutsch</button>
-            </div>
         </header>
         
-        <!-- صفحه اصلی -->
+        <!-- صفحه اصلی جدید -->
         <div id="home" class="page active">
+            <div class="page-content">
+                <div class="home-intro">
+                    <h1>انرژی خورشیدی: راهکار پایدار برای آینده</h1>
+                    <p>با بهره‌گیری از انرژی پاک و تجدیدپذیر خورشید، می‌توانید به استقلال انرژی دست یافته و در حفظ محیط زیست مشارکت کنید. سیستم‌های خورشیدی راهکار مقرون به صرفه‌ای برای تامین انرژی خانه‌ها، ویلاها و کسب‌وکارها ارائه می‌دهند.</p>
+                </div>
+                
+                <div class="home-grid">
+                    <div class="home-card">
+                        <div class="home-img">تصویر سیستم خورشیدی خانگی</div>
+                        <div class="home-card-content">
+                            <h3>سیستم‌های خانگی</h3>
+                            <p>راهکارهای مقرون به صرفه برای تامین برق خانه‌ها با استفاده از انرژی پاک خورشیدی</p>
+                        </div>
+                    </div>
+                    
+                    <div class="home-card">
+                        <div class="home-img">تصویر سیستم خورشیدی تجاری</div>
+                        <div class="home-card-content">
+                            <h3>سیستم‌های تجاری</h3>
+                            <p>کاهش هزینه‌های برق کسب‌وکارها با نصب سیستم‌های خورشیدی صنعتی</p>
+                        </div>
+                    </div>
+                    
+                    <div class="home-card">
+                        <div class="home-img">تصویر سیستم خورشیدی مستقل</div>
+                        <div class="home-card-content">
+                            <h3>سیستم‌های مستقل</h3>
+                            <p>تامین برق مناطق دور از شبکه با سیستم‌های خورشیدی مستقل و باتری‌های ذخیره‌سازی</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content-box">
+                    <h2 class="page-title"><i class="fas fa-lightbulb"></i> مزایای استفاده از انرژی خورشیدی</h2>
+                    
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <h3><i class="fas fa-bolt"></i> کاهش هزینه‌ها</h3>
+                            <p>کاهش قابل توجه هزینه‌های برق در بلندمدت با استفاده از انرژی رایگان خورشید</p>
+                        </div>
+                        
+                        <div class="service-card">
+                            <h3><i class="fas fa-leaf"></i> دوستدار محیط زیست</h3>
+                            <p>کاهش انتشار گازهای گلخانه‌ای و کمک به حفظ محیط زیست برای نسل‌های آینده</p>
+                        </div>
+                        
+                        <div class="service-card">
+                            <h3><i class="fas fa-shield-alt"></i> استقلال انرژی</h3>
+                            <p>کاهش وابستگی به شبکه برق شهری و جلوگیری از مشکلات ناشی از قطعی برق</p>
+                        </div>
+                        
+                        <div class="service-card">
+                            <h3><i class="fas fa-chart-line"></i> ارزش افزوده ملک</h3>
+                            <p>افزایش ارزش ملک با نصب سیستم‌های خورشیدی مدرن و پایدار</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- صفحه درباره ما -->
+        <div id="about" class="page">
             <div class="page-content">
                 <h1 class="page-title"><i class="fas fa-home"></i> درباره ما </h1>
                 
@@ -960,6 +1283,192 @@
             </div>
         </div>
         
+        <!-- صفحه سیستم مستقل از شبکه (آفگرید) -->
+        <div id="offgrid" class="page">
+            <div class="page-content">
+                <div class="offgrid-calculator">
+                    <h2>محاسبه‌گر سیستم برق خورشیدی مستقل (آفگرید)</h2>
+                    
+                    <div class="offgrid-result">
+                        <h3><i class="fas fa-sun"></i> آیا باغ، ویلا یا خونه یا کمپر شما هنوز به برق وصل نیست؟</h3>
+                        <p>یا نگران قطعی‌های مکرر برق هستید؟</p>
+                        <p class="highlight">راه‌حل ساده‌تر از چیزی‌ست که فکرش را می‌کنید: برق خورشیدی هوشمند، مستقل، و همیشه در دسترس!</p>
+                        
+                        <p>تصور کنید در دل طبیعت هستید، بدون نیاز به سیم‌کشی‌های پرهزینه یا وابستگی به شبکه سراسری برق. تنها با چند پنل خورشیدی و یک سیستم ذخیره‌سازی انرژی، می‌توانید به برق پایدار، پاک و مقرون‌به‌صرفه دست پیدا کنید.</p>
+                        
+                        <p>📌 <span class="highlight">چقدر برق نیاز دارید؟ ما به شما می‌گوییم!</span><br>
+                        با استفاده از محاسبه‌گرهای آنلاین برق خورشیدی، کافی‌ست فقط لیست وسایل برقی‌تان را وارد کنید: یخچال، تلویزیون، پمپ آب، چراغ‌ها، پنکه، لپ‌تاپ یا حتی کولر. ما بر اساس میزان مصرف انرژی روزانه و ساعات استفاده، دقیقاً به شما می‌گوییم:</p>
+                        
+                        <ul>
+                            <li>چند پنل خورشیدی نیاز دارید؟</li>
+                            <li>چه تعداد و چه ظرفیتی از باتری‌های لیتیومی یا باتری‌های مخصوص سولار باید استفاده کنید؟</li>
+                            <li>آیا اینورتر معمولی کافی است یا باید از اینورترهای هیبریدی یا سانورترها بهره بگیرید؟</li>
+                            <li>هزینه تقریبی اجرای کامل سیستم چقدر می‌شود؟</li>
+                        </ul>
+                        
+                        <p>💡 <span class="highlight">حتی اگر تنها نگرانی‌تان قطعی برق چند ساعته در روز است، ما برای آن هم راه‌حل داریم:</span><br>
+                        فرض کنید در خانه یا محل کارتان، روزی ۲ ساعت برق قطع می‌شود و می‌خواهید یخچال، چند لامپ و شارژر موبایل روشن بماند. ما دقیقاً محاسبه می‌کنیم برای این مدت، چند وات‌ساعت برق نیاز دارید و چطور می‌توانید با یک باتری خورشیدی کوچک و یک اینورتر ساده، این نیاز را پوشش دهید.</p>
+                        
+                        <p>⚡️ از کوچک‌ترین سیستم‌های قابل‌حمل تا سیستم‌های بزرگ برای خانه و ویلا</p>
+                    </div>
+                    
+                    <!-- 1. ماشین حساب بار -->
+                    <div class="offgrid-input-group">
+                        <h3><i class="fas fa-calculator"></i> محاسبه مصرف انرژی</h3>
+                        <p>لوازم برقی خود را انتخاب کنید تا مصرف انرژی محاسبه شود:</p>
+                        
+                        <label for="offgrid-applianceSelect">انتخاب وسیله برقی:</label>
+                        <select id="offgrid-applianceSelect">
+                            <option value="">-- انتخاب کنید --</option>
+                            <option value="fridge">یخچال (150 وات)</option>
+                            <option value="tv">تلویزیون LED (100 وات)</option>
+                            <option value="light">لامپ LED (10 وات)</option>
+                            <option value="fan">پنکه سقفی (75 وات)</option>
+                            <option value="ac">کولر گازی (2000 وات)</option>
+                            <option value="pc">کامپیوتر (300 وات)</option>
+                            <option value="washing">ماشین لباسشویی (500 وات)</option>
+                            <option value="waterpump">پمپ آب (750 وات)</option>
+                            <option value="cctv">دوربین مداربسته (9 وات)</option>
+                            <option value="dvr">دستگاه دی وی آر (36 وات)</option>
+                            <option value="modem">مودم (12 وات)</option>
+                            <option value="small_water_cooler">کولر آبی کوچک (350 وات)</option>
+                            <option value="large_water_cooler">کولر آبی بزرگ (750 وات)</option>
+                            <option value="fan90">پنکه (90 وات)</option>
+                            <option value="custom">سایر تجهیزات (وات را وارد کنید)</option>
+                        </select>
+                        
+                        <div id="offgrid-customWattageGroup" style="display:none;">
+                            <label for="offgrid-customWattage">توان دستگاه (وات):</label>
+                            <input type="number" id="offgrid-customWattage" min="0" placeholder="توان دستگاه را وارد کنید">
+                        </div>
+                        
+                        <label for="offgrid-hoursPerDay">ساعت استفاده در روز:</label>
+                        <input type="number" id="offgrid-hoursPerDay" min="0" max="24" value="4">
+                        
+                        <table class="offgrid-table" id="offgrid-applianceTable">
+                            <thead>
+                                <tr>
+                                    <th>وسیله</th>
+                                    <th>توان (وات)</th>
+                                    <th>ساعت/روز</th>
+                                    <th>وات‌ساعت/روز</th>
+                                    <th>حذف</th>
+                                </tr>
+                            </thead>
+                            <tbody id="offgrid-applianceList"></tbody>
+                        </table>
+                        
+                        <div class="offgrid-button-group">
+                            <button class="offgrid-btn" onclick="offgrid_addAppliance()">
+                                <i class="fas fa-plus"></i> افزودن وسیله
+                            </button>
+                            <button class="offgrid-btn" onclick="offgrid_calculateEnergy()">
+                                <i class="fas fa-calculator"></i> محاسبه مصرف
+                            </button>
+                            <button class="offgrid-btn" onclick="offgrid_resetCalculator()">
+                                <i class="fas fa-redo"></i> بازنشانی
+                            </button>
+                        </div>
+                        
+                        <div class="offgrid-result" id="offgrid-energyResult"></div>
+                    </div>
+                    
+                    <!-- 2. ماشین حساب پنل خورشیدی -->
+                    <div class="offgrid-input-group">
+                        <h3><i class="fas fa-solar-panel"></i> محاسبه پنل خورشیدی مورد نیاز</h3>
+                        
+                        <label for="offgrid-dailyUsage">مصرف روزانه (وات‌ساعت):</label>
+                        <input type="number" id="offgrid-dailyUsage" readonly class="offgrid-input">
+                        
+                        <label for="offgrid-sunHours">ساعات آفتابی موثر (ساعت):</label>
+                        <input type="number" id="offgrid-sunHours" min="1" max="8" value="5" class="offgrid-input">
+                        <p class="offgrid-hint">میانگین ساعات آفتابی در ایران بین 4.5 تا 5.5 ساعت است</p>
+                        
+                        <label for="offgrid-panelWattage">توان هر پنل (وات):</label>
+                        <input type="number" id="offgrid-panelWattage" min="100" max="700" value="300" placeholder="بین 100 تا 700 وات" class="offgrid-input">
+                        <p class="offgrid-hint">پنل‌های رایج بین 300 تا 500 وات هستند</p>
+                        
+                        <button class="offgrid-btn" onclick="offgrid_calculatePanels()">
+                            <i class="fas fa-sun"></i> محاسبه پنل‌ها
+                        </button>
+                        
+                        <div class="offgrid-result" id="offgrid-panelResult"></div>
+                    </div>
+                    
+                    <!-- 3. ماشین حساب باتری -->
+                    <div class="offgrid-input-group">
+                        <h3><i class="fas fa-battery-full"></i> محاسبه باتری مورد نیاز</h3>
+                        
+                        <label for="offgrid-batteryDailyUsage">مصرف روزانه (وات‌ساعت):</label>
+                        <input type="number" id="offgrid-batteryDailyUsage" readonly class="offgrid-input">
+                        
+                        <label for="offgrid-daysAutonomy">روزهای ذخیره انرژی:</label>
+                        <input type="number" id="offgrid-daysAutonomy" min="1" value="2" class="offgrid-input">
+                        <p class="offgrid-hint">تعداد روزهایی که سیستم باید بدون شارژ خورشیدی کار کند</p>
+                        
+                        <label for="offgrid-batteryVoltage">ولتاژ باتری (ولت):</label>
+                        <select id="offgrid-batteryVoltage" class="offgrid-select">
+                            <option value="12">12 ولت</option>
+                            <option value="24">24 ولت</option>
+                            <option value="48">48 ولت</option>
+                        </select>
+                        
+                        <label for="offgrid-batteryDOD">عمق تخلیه باتری (%):</label>
+                        <input type="number" id="offgrid-batteryDOD" min="1" max="100" value="50" class="offgrid-input">
+                        <p class="offgrid-hint">برای باتری‌های لیتیومی 80% و برای باتری‌های اسیدی 50% در نظر گرفته می‌شود</p>
+                        
+                        <button class="offgrid-btn" onclick="offgrid_calculateBattery()">
+                            <i class="fas fa-car-battery"></i> محاسبه باتری
+                        </button>
+                        
+                        <div class="offgrid-result" id="offgrid-batteryResult"></div>
+                    </div>
+                    
+                    <!-- 4. ماشین حساب اینورتر -->
+                    <div class="offgrid-input-group">
+                        <h3><i class="fas fa-plug"></i> محاسبه اینورتر مورد نیاز</h3>
+                        
+                        <label for="offgrid-totalWattage">حداکثر توان همزمان (وات):</label>
+                        <input type="number" id="offgrid-totalWattage" readonly class="offgrid-input">
+                        
+                        <label for="offgrid-surgeFactor">ضریب جریان راه‌اندازی:</label>
+                        <input type="number" id="offgrid-surgeFactor" min="1" step="0.1" value="1.3" class="offgrid-input">
+                        <p class="offgrid-hint">برای موتورها و دستگاه‌های با راه‌اندازی سنگین، ضریب بالاتری در نظر بگیرید</p>
+                        
+                        <button class="offgrid-btn" onclick="offgrid_calculateInverter()">
+                            <i class="fas fa-bolt"></i> محاسبه اینورتر
+                        </button>
+                        
+                        <div class="offgrid-result" id="offgrid-inverterResult"></div>
+                    </div>
+                    
+                    <div class="offgrid-system-summary" id="offgrid-systemSummary" style="display: none;">
+                        <div class="offgrid-summary-card">
+                            <h3>پنل خورشیدی</h3>
+                            <div class="offgrid-summary-value" id="offgrid-summaryPanels">0</div>
+                            <div class="offgrid-summary-unit">پنل مورد نیاز</div>
+                        </div>
+                        
+                        <div class="offgrid-summary-card">
+                            <h3>باتری</h3>
+                            <div class="offgrid-summary-value" id="offgrid-summaryBattery">0</div>
+                            <div class="offgrid-summary-unit">آمپر-ساعت</div>
+                        </div>
+                        
+                        <div class="offgrid-summary-card">
+                            <h3>اینورتر</h3>
+                            <div class="offgrid-summary-value" id="offgrid-summaryInverter">0</div>
+                            <div class="offgrid-summary-unit">وات</div>
+                        </div>
+                    </div>
+                    
+                    <div class="offgrid-support-note">
+                        برای محاسبه دقیق‌تر و دریافت مشاوره تخصصی، با پشتیبانی مجموعه تماس بگیرید
+                    </div>
+                </div>
+            </div>
+        </div>
+        
         <!-- صفحه ارتباط با ما -->
         <div id="contact" class="page">
             <div class="page-content">
@@ -1031,9 +1540,35 @@
             </div>
         </div>
         
-        <footer>
-            <p><i class="fas fa-copyright"></i> 2025 شرکت ارج ارتباط سبز | ابزارهای حرفه‌ای انرژی خورشیدی</p>
-        </footer>
+        <!-- فوتر جدید -->
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ارتباط با ما</h3>
+                <p><i class="fas fa-phone"></i> 021-91558402</p>
+                <p><i class="fas fa-envelope"></i> info@arj-ertebatsabz.ir</p>
+                <p><i class="fas fa-map-marker-alt"></i> بجنورد، خیابان میرزارضای کرمانی، بین میرزا رضای 5و7 ، پلاک 91</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>لینک‌های مفید</h3>
+                <p><a href="#" data-page="home">صفحه نخست</a></p>
+                <p><a href="#" data-page="about">درباره ما</a></p>
+                <p><a href="#" data-page="services">خدمات ما</a></p>
+                <p><a href="#" data-page="offgrid">سیستم مستقل</a></p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>خدمات ما</h3>
+                <p>طراحی و نصب سیستم‌های خورشیدی</p>
+                <p>مشاوره فنی و اقتصادی</p>
+                <p>طرح توجیهی و اتصال به شبکه</p>
+                <p>خدمات پس از فروش</p>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p><i class="fas fa-copyright"></i> 2025 شرکت ارج ارتباط سبز | تمام حقوق محفوظ است</p>
+        </div>
     </div>
 
     <script>
@@ -1231,22 +1766,7 @@
                     option.textContent = translations[lang][key];
                 }
             });
-            
-            // به‌روزرسانی دکمه زبان فعال
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.remove('active');
-                if (btn.getAttribute('data-lang') === lang) {
-                    btn.classList.add('active');
-                }
-            });
         }
-        
-        // تنظیم دکمه‌های زبان
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                changeLanguage(btn.getAttribute('data-lang'));
-            });
-        });
         
         // محاسبه از اندازه کابل
         function calculateFromCable() {
@@ -1480,6 +2000,243 @@
             changeLanguage('fa');
             updateCapacityDependentFields();
         };
+        
+        // کد ماشین حساب سیستم مستقل
+        const offgrid_appliances = {
+            fridge: { name: "یخچال", wattage: 150 },
+            tv: { name: "تلویزیون", wattage: 100 },
+            light: { name: "لامپ", wattage: 10 },
+            fan: { name: "پنکه سقفی", wattage: 75 },
+            ac: { name: "کولر گازی", wattage: 2000 },
+            pc: { name: "کامپیوتر", wattage: 300 },
+            washing: { name: "ماشین لباسشویی", wattage: 500 },
+            waterpump: { name: "پمپ آب", wattage: 750 },
+            cctv: { name: "دوربین مداربسته", wattage: 9 },
+            dvr: { name: "دستگاه دی وی آر", wattage: 36 },
+            modem: { name: "مودم", wattage: 12 },
+            small_water_cooler: { name: "کولر آبی کوچک", wattage: 350 },
+            large_water_cooler: { name: "کولر آبی بزرگ", wattage: 750 },
+            fan90: { name: "پنکه", wattage: 90 },
+            custom: { name: "سایر تجهیزات", wattage: 0 }
+        };
+
+        // مدیریت انتخاب دستگاه سفارشی
+        document.getElementById('offgrid-applianceSelect').addEventListener('change', function() {
+            if (this.value === 'custom') {
+                document.getElementById('offgrid-customWattageGroup').style.display = 'block';
+            } else {
+                document.getElementById('offgrid-customWattageGroup').style.display = 'none';
+            }
+            
+            // تنظیم ساعت 24 برای دستگاه‌های خاص
+            const devices24h = ['cctv', 'dvr', 'modem'];
+            if (devices24h.includes(this.value)) {
+                document.getElementById('offgrid-hoursPerDay').value = 24;
+            }
+        });
+
+        // افزودن وسیله به لیست
+        function offgrid_addAppliance() {
+            const select = document.getElementById("offgrid-applianceSelect");
+            const hoursInput = document.getElementById("offgrid-hoursPerDay");
+            const tableBody = document.getElementById("offgrid-applianceList");
+            
+            if (!select.value) {
+                alert("لطفاً یک وسیله را انتخاب کنید");
+                return;
+            }
+            
+            let appliance = offgrid_appliances[select.value];
+            let applianceName = appliance.name;
+            let wattage = appliance.wattage;
+            
+            // اگر دستگاه سفارشی بود، وات را از ورودی بگیر
+            if (select.value === 'custom') {
+                const customWattage = document.getElementById("offgrid-customWattage").value;
+                if (!customWattage || customWattage <= 0) {
+                    alert("لطفاً توان دستگاه را وارد کنید");
+                    return;
+                }
+                wattage = parseInt(customWattage);
+                applianceName = "تجهیزات دیگر";
+            }
+            
+            const hours = parseFloat(hoursInput.value);
+            if (hours <= 0) {
+                alert("ساعت استفاده باید بیشتر از صفر باشد");
+                return;
+            }
+            
+            const dailyWh = wattage * hours;
+            
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                <td>${applianceName}</td>
+                <td>${wattage}</td>
+                <td>${hours}</td>
+                <td>${dailyWh}</td>
+                <td><button onclick="offgrid_removeRow(this)">حذف</button></td>
+            `;
+            
+            tableBody.appendChild(row);
+            select.value = "";
+            document.getElementById("offgrid-customWattageGroup").style.display = "none";
+            document.getElementById("offgrid-customWattage").value = "";
+        }
+
+        // حذف ردیف
+        function offgrid_removeRow(button) {
+            const row = button.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+        }
+
+        // محاسبه مصرف انرژی
+        function offgrid_calculateEnergy() {
+            const rows = document.querySelectorAll("#offgrid-applianceList tr");
+            if (rows.length === 0) {
+                alert("لطفاً حداقل یک وسیله اضافه کنید");
+                return;
+            }
+            
+            let totalDailyWh = 0;
+            let totalWattage = 0;
+            
+            rows.forEach(row => {
+                const cells = row.cells;
+                totalDailyWh += parseFloat(cells[3].textContent);
+                totalWattage += parseFloat(cells[1].textContent);
+            });
+            
+            const resultDiv = document.getElementById("offgrid-energyResult");
+            resultDiv.innerHTML = `
+                <h3>نتایج محاسبه انرژی</h3>
+                <p>مصرف روزانه: <strong>${totalDailyWh} وات‌ساعت</strong></p>
+                <p>مجموع توان تجهیزات: <strong>${totalWattage} وات</strong></p>
+            `;
+            
+            // پر کردن فیلدهای سایر ماشین حساب‌ها
+            document.getElementById("offgrid-dailyUsage").value = totalDailyWh;
+            document.getElementById("offgrid-batteryDailyUsage").value = totalDailyWh;
+            document.getElementById("offgrid-totalWattage").value = totalWattage;
+        }
+
+        // محاسبه پنل خورشیدی
+        function offgrid_calculatePanels() {
+            const dailyUsage = parseFloat(document.getElementById("offgrid-dailyUsage").value);
+            if (!dailyUsage || dailyUsage <= 0) {
+                alert("لطفاً ابتدا مصرف انرژی را محاسبه کنید");
+                return;
+            }
+            
+            const sunHours = parseFloat(document.getElementById("offgrid-sunHours").value);
+            if (sunHours <= 0 || sunHours > 8) {
+                alert("ساعات آفتابی باید بین 1 تا 8 باشد");
+                return;
+            }
+            
+            const panelWattage = parseFloat(document.getElementById("offgrid-panelWattage").value);
+            if (panelWattage < 100 || panelWattage > 700) {
+                alert("توان پنل باید بین 100 تا 700 وات باشد");
+                return;
+            }
+            
+            const requiredWattage = dailyUsage / sunHours;
+            const panelCount = Math.ceil(requiredWattage / panelWattage);
+            
+            const resultDiv = document.getElementById("offgrid-panelResult");
+            resultDiv.innerHTML = `
+                <h3>نتایج محاسبه پنل</h3>
+                <p>توان مورد نیاز: <strong>${Math.round(requiredWattage)} وات</strong></p>
+                <p>تعداد پنل ${panelWattage} واتی: <strong>${panelCount} عدد</strong></p>
+                <p>کل توان پنل‌ها: <strong>${panelCount * panelWattage} وات</strong></p>
+            `;
+            
+            // ذخیره برای خلاصه سیستم
+            document.getElementById("offgrid-summaryPanels").textContent = panelCount;
+            document.getElementById("offgrid-systemSummary").style.display = "grid";
+        }
+
+        // محاسبه باتری
+        function offgrid_calculateBattery() {
+            const dailyUsage = parseFloat(document.getElementById("offgrid-batteryDailyUsage").value);
+            if (!dailyUsage || dailyUsage <= 0) {
+                alert("لطفاً ابتدا مصرف انرژی را محاسبه کنید");
+                return;
+            }
+            
+            const daysAutonomy = parseFloat(document.getElementById("offgrid-daysAutonomy").value);
+            if (daysAutonomy <= 0) {
+                alert("روزهای ذخیره انرژی باید بیشتر از صفر باشد");
+                return;
+            }
+            
+            const batteryVoltage = parseFloat(document.getElementById("offgrid-batteryVoltage").value);
+            const batteryDOD = parseFloat(document.getElementById("offgrid-batteryDOD").value) / 100;
+            
+            const totalWh = dailyUsage * daysAutonomy;
+            const usableWh = totalWh / batteryDOD;
+            const ahCapacity = usableWh / batteryVoltage;
+            
+            const resultDiv = document.getElementById("offgrid-batteryResult");
+            resultDiv.innerHTML = `
+                <h3>نتایج محاسبه باتری</h3>
+                <p>ظرفیت مورد نیاز: <strong>${Math.round(usableWh)} وات‌ساعت</strong></p>
+                <p>ظرفیت آمپر-ساعت: <strong>${Math.round(ahCapacity)} Ah در ${batteryVoltage} ولت</strong></p>
+                <p>تعداد باتری 200Ah: <strong>${Math.ceil(ahCapacity / 200)} عدد</strong></p>
+            `;
+            
+            // ذخیره برای خلاصه سیستم
+            document.getElementById("offgrid-summaryBattery").textContent = Math.round(ahCapacity);
+            document.getElementById("offgrid-systemSummary").style.display = "grid";
+        }
+
+        // محاسبه اینورتر
+        function offgrid_calculateInverter() {
+            const totalWattage = parseFloat(document.getElementById("offgrid-totalWattage").value);
+            if (!totalWattage || totalWattage <= 0) {
+                alert("لطفاً ابتدا مصرف انرژی را محاسبه کنید");
+                return;
+            }
+            
+            const surgeFactor = parseFloat(document.getElementById("offgrid-surgeFactor").value);
+            if (surgeFactor < 1) {
+                alert("ضریب جریان راه‌اندازی باید حداقل 1 باشد");
+                return;
+            }
+            
+            const inverterSize = Math.ceil(totalWattage * surgeFactor);
+            
+            const resultDiv = document.getElementById("offgrid-inverterResult");
+            resultDiv.innerHTML = `
+                <h3>نتایج محاسبه اینورتر</h3>
+                <p>اندازه اینورتر: <strong>${inverterSize} وات</strong></p>
+                <p>ظرفیت جریان راه‌اندازی: <strong>${Math.round(inverterSize * 1.5)} وات</strong></p>
+                <div class="offgrid-note">
+                    <p>توجه: برای سیستم‌های بزرگتر از 3000 وات، استفاده از اینورترهای هیبریدی یا سانورتر توصیه می‌شود.</p>
+                </div>
+            `;
+            
+            // ذخیره برای خلاصه سیستم
+            document.getElementById("offgrid-summaryInverter").textContent = inverterSize;
+            document.getElementById("offgrid-systemSummary").style.display = "grid";
+        }
+
+        // بازنشانی ماشین حساب
+        function offgrid_resetCalculator() {
+            document.getElementById("offgrid-applianceList").innerHTML = "";
+            document.getElementById("offgrid-energyResult").innerHTML = "";
+            document.getElementById("offgrid-dailyUsage").value = "";
+            document.getElementById("offgrid-batteryDailyUsage").value = "";
+            document.getElementById("offgrid-panelResult").innerHTML = "";
+            document.getElementById("offgrid-batteryResult").innerHTML = "";
+            document.getElementById("offgrid-inverterResult").innerHTML = "";
+            document.getElementById("offgrid-totalWattage").value = "";
+            document.getElementById("offgrid-systemSummary").style.display = "none";
+            document.getElementById("offgrid-applianceSelect").value = "";
+            document.getElementById("offgrid-customWattageGroup").style.display = "none";
+            document.getElementById("offgrid-customWattage").value = "";
+            document.getElementById("offgrid-hoursPerDay").value = "4";
+        }
     </script>
 <script type="text/javascript">
   (function(d, t) {
@@ -1496,6 +2253,6 @@
       }
       v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
   })(document, 'script');
-</script> 
+</script>
 </body>
 </html>
